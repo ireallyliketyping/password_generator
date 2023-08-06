@@ -1,6 +1,7 @@
 import secrets
 import string
 
+# Check to make sure the password length input is correct.
 def validInput(length):
     if (not length.isdigit()):
         print(f"You need to enter a positive int.\n")
@@ -12,6 +13,7 @@ def validInput(length):
         print(f"Password length will be {length}\n")
         return int(float(length))
 
+# Ask the user for their password character selection.
 def include_punctuation():
     answer = input("Would you like to include punctuation? (y/n)\n")
     if answer == "y":
@@ -21,6 +23,7 @@ def include_punctuation():
         print(f"Password will not include punctuation.\n")
         return False
 
+# Generate the password, of correct length and including correct characters.
 def generate_password(characters, password_length):
     password = ''.join(secrets.choice(characters) for i in range (1,password_length + 1, 1))
     return password
