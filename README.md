@@ -1,2 +1,3 @@
 # password_generator
-simple password generator, including ascii characters, digits, and punctuation
+This is a simple password generator. 
+User is asked if they want to include punctuation or not.
